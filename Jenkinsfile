@@ -23,7 +23,7 @@ pipeline {
         stage('Checkout from Git') {
             steps {
 		echo "Cloning repository ${env.GIT_URL}"
-                git branch: 'main', credentialsId: 'Github-Token', url: 'git@github.com:Mystoche/reddit-clone.git'
+                git branch: 'main', credentialsId: 'Github-Token', url: 'https://github.com/Mystoche/reddit-clone.git'
             }
         }
         stage("Sonarqube Analysis") {
