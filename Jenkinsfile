@@ -22,6 +22,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
+		echo "Cloning repository ${env.GIT_URL}"
                 git branch: 'main', url: 'git@github.com:Mystoche/reddit-clone.git'
             }
         }
