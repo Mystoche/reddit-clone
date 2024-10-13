@@ -52,7 +52,7 @@ pipeline {
         		# Installer Trivy
 	  
         		wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.56.2_Linux-64bit.deb
-        		sudo dpkg -i trivy_0.56.2_Linux-64bit.deb
+        		dpkg -i trivy_0.56.2_Linux-64bit.deb
 	  		trivy fs . > trivyfs.txt
        		   '''
 		    
